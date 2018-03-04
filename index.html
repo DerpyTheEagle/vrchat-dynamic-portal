@@ -21,9 +21,11 @@
   </body>
   <script src="teleport.js"></script>
   <script>
+    jQuery.noConflict();
+
     function debug(text) {
       console.log(text);
-      $("#devconsole").append("<p>" + text + "</p>");
+      jQuery("#devconsole").append("<p>" + text + "</p>");
     }
 
     window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {

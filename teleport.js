@@ -24,7 +24,7 @@ function addWorld(worldimage, worldtitle, worldid) {
 
   element = document.createElement('ul');
   element.innerHTML = template;
-  $("#container").append(element);
+  jQuery("#container").append(element);
 }
 
 function populateWorlds() {
@@ -44,9 +44,9 @@ function goToWorld(id) {
 }
 
 function onDevConsole() {
-  $("#devconsole").removeClass("hidden");
+  jQuery("#devconsole").removeClass("hidden");
 }
 
 function offDevConsole() {
-  $("#devconsole").addClass("hidden");
+  jQuery("#devconsole").addClass("hidden");
 }
