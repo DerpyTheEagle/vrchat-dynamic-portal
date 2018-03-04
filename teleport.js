@@ -12,7 +12,7 @@ var worlds = [
 var bindingsReady = false;
 
 function onBindingsReady(evt) {
-    debug("bindings ready!")
+    debug("bindings ready!");
     bindingsReady = true;
 }
 document.addEventListener('onBindingsReady', onBindingsReady, false);
