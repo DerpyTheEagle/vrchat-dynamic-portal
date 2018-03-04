@@ -7,7 +7,7 @@ var worlds = [
   {image:'https://files.vrchat.cloud/thumbnails/1561310256.thumbnail-500.png', title:'Void Club', id:'wrld_7e10376a-29b6-43af-ac5d-6eb72732e90c'},
   {image:'https://s3-us-west-2.amazonaws.com/vrc-uploads/images/image_1200x900_2017-08-30_17-55-46.png', title:'Gaia Night', id:'wrld_d945fde1-987a-45f9-998c-a081fad71ba1'},
   {image:'https://files.vrchat.cloud/thumbnails/856346215.thumbnail-500.png', title:'Sakura Hiroba', id:'wrld_8915143b-7573-4b02-a03d-80dd77ae5899'},
-]
+];
 
 var bindingsReady = false;
 
