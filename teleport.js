@@ -47,6 +47,7 @@ function addWorld(worldimage, worldtitle, worldid) {
 }
 
 function populateWorlds() {
+  debug("populating worlds list!")
   for (i = 0; i < worlds.length; i++) {
     addWorld(worlds[i].image, worlds[i].title, worlds[i].id)
   }
