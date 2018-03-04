@@ -9,11 +9,6 @@ var worlds = [
   {image:'https://files.vrchat.cloud/thumbnails/856346215.thumbnail-500.png', title:'Sakura Hiroba', id:'wrld_8915143b-7573-4b02-a03d-80dd77ae5899'},
 ]
 
-function debug(text) {
-  console.log(text)
-  $("#devconsole").append("<p>" + text + "</p>")
-}
-
 var bindingsReady = false;
 
 function onBindingsReady(evt) {

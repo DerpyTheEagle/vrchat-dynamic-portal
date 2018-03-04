@@ -21,11 +21,16 @@
   </body>
   <script src="teleport.js"></script>
   <script>
+    function debug(text) {
+      console.log(text)
+      $("#devconsole").append("<p>" + text + "</p>")
+    }
+
     window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
       debug("Error occured: " + errorMsg);//or any message
       return false;
     }
-  
+
     document.addEventListener("DOMContentLoaded", function() {
       debug("page successfully loaded! now, do we have our external JS..?")
       populateWorlds();
