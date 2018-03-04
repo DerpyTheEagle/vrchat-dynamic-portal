@@ -53,5 +53,5 @@ function offDevConsole() {
 }
 
 function evalDevConsole() {
-  eval(jQuery("#devconsoleinput").val())
+  eval(jQuery("#devconsoleinput").val());
 }
