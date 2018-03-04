@@ -27,7 +27,7 @@
     }
 
     window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
-      debug("ERROR: " + errorMsg + " on line " + lineNumber);
+      debug("ERROR: " + errorMsg + " on line " + lineNumber + " in file " + url);
       return false;
     }
 

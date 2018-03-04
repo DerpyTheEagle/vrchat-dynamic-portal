@@ -24,7 +24,7 @@ function addWorld(worldimage, worldtitle, worldid) {
 
   element = document.createElement('ul');
   element.innerHTML = template;
-  document.getElementById('container').append(element);
+  $("#container").append(element);
 }
 
 function populateWorlds() {
