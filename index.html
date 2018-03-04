@@ -9,14 +9,24 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
   </head>
-  <body>
+  <body unselectable="on" onselectstart="return false;" onmousedown="return false;">
     <ul id="navbar">
-      <li onclick="offDevConsole()"><i class="fas fa-globe"></i></li>
-      <li onclick="onDevConsole()"><i class="fas fa-terminal"></i></li>
+      <li onclick="offDevConsole();"><i class="fas fa-globe"></i></li>
+      <li onclick="onDevConsole();"><i class="fas fa-terminal"></i></li>
     </ul>
     <div id="container">
     </div>
-    <div id="devconsole" class="">
+    <div id="devconsole" class="hidden">
+      <form>
+        <table>
+          <th style="width:95%">
+            <input id="devconsoleinput" type="text">
+          </th>
+          <th style="width:5%">
+            <button id="devconsolesubmit" type="button" onClick="evalDevConsole();">Evaluate</button>
+          </th>
+        </table>
+    </form>
     </div>
   </body>
   <script src="teleport.js"></script>

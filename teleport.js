@@ -20,7 +20,7 @@ document.addEventListener('onBindingsReady', onBindingsReady, false);
 function addWorld(worldimage, worldtitle, worldid) {
   var template;
   var element;
-  template = "<li><table class=\"world\" onClick=\"goToWorld(\'" + worldid + "\')\"><tr><th><img class=\"worldpreview\" src=\"" + worldimage + "\"></th><th><h1 class=\"worldtitle\">" + worldtitle + "</h1></th><tr></li>";
+  template = "<li><table class=\"world\" onClick=\"goToWorld(\'" + worldid + "\');\"><tr><th><img class=\"worldpreview\" src=\"" + worldimage + "\"></th><th><h1 class=\"worldtitle\">" + worldtitle + "</h1></th><tr></li>";
 
   element = document.createElement('ul');
   element.innerHTML = template;
@@ -38,6 +38,7 @@ function populateWorlds() {
 function goToWorld(id) {
   if (!bindingsReady) {
     debug("tried to port, but bindings aren't ready! are we even in VRChat?");
+    return;
   }
   debug("jumping to world= " + id);
   engine.call("VRCSDK2.Networking.GoToRoom", id);
@@ -49,4 +50,8 @@ function onDevConsole() {
 
 function offDevConsole() {
   jQuery("#devconsole").addClass("hidden");
+}
+
+function evalDevConsole() {
+  eval(jQuery("#devconsoleinput").val())
 }
