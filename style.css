@@ -23,7 +23,7 @@ body {
 #devconsole p {
   font-family: 'Inconsolata', monospace;
   color: white;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 #navbar {
@@ -84,6 +84,10 @@ body {
   border-color: #232323;
   border-radius: 10px;
   margin-bottom: 20px;
+}
+
+.world:hover {
+  background-color: #232323;
 }
 
 .world .worldpreview {

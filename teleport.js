@@ -20,7 +20,7 @@ document.addEventListener('onBindingsReady', onBindingsReady, false);
 function addWorld(worldimage, worldtitle, worldid) {
   var template;
   var element;
-  template = "<li><table class=\"world\" onClick=\"goToWorld(\'" + worldid + "\');\"><tr><th><img class=\"worldpreview\" src=\"" + worldimage + "\"></th><th><h1 class=\"worldtitle\">" + worldtitle + "</h1></th><tr></li>";
+  template = "<li><table class=\"world\" onClick=\"goToWorld(\'" + worldid + "\');\"><tr><th style=\"width:17%\"><img class=\"worldpreview\" src=\"" + worldimage + "\"></th><th style=\"width:83%\"><h1 class=\"worldtitle\">" + worldtitle + "</h1></th><tr></li>";
 
   element = document.createElement('ul');
   element.innerHTML = template;
