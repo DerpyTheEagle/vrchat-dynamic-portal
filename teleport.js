@@ -18,10 +18,10 @@ function onBindingsReady(evt) {
 document.addEventListener('onBindingsReady', onBindingsReady, false);
 
 function addWorld(worldimage, worldtitle, worldid) {
-  var template
-  var element
-  var clone
-  var node
+  var template;
+  var element;
+  var clone;
+  var node;
   template = `
     <li>
       <table class="world" onClick="goToWorld(\'${worldid}\')">
@@ -34,17 +34,17 @@ function addWorld(worldimage, worldtitle, worldid) {
           </th>
         <tr>
     </li>
-  `
+  `;
 
-  element = document.createElement('ul')
-  element.innerHTML = template
-  document.getElementById('container').append(element)
+  element = document.createElement('ul');
+  element.innerHTML = template;
+  document.getElementById('container').append(element);
 }
 
 function populateWorlds() {
-  debug("populating worlds list!")
+  debug("populating worlds list!");
   for (i = 0; i < worlds.length; i++) {
-    addWorld(worlds[i].image, worlds[i].title, worlds[i].id)
+    addWorld(worlds[i].image, worlds[i].title, worlds[i].id);
   }
 }
 
@@ -53,14 +53,14 @@ function goToWorld(id) {
     if (!bindingsReady) {
 	      debug("tried to port, but bindings aren't ready! are we even in VRChat?");
     }
-    debug("jumping to world= " + id)
+    debug("jumping to world= " + id);
     engine.call("VRCSDK2.Networking.GoToRoom", id);
 }
 
 function onDevConsole() {
-  $("#devconsole").removeClass("hidden")
+  $("#devconsole").removeClass("hidden");
 }
 
 function offDevConsole() {
-  $("#devconsole").addClass("hidden")
+  $("#devconsole").addClass("hidden");
 }

@@ -22,8 +22,8 @@
   <script src="teleport.js"></script>
   <script>
     function debug(text) {
-      console.log(text)
-      $("#devconsole").append("<p>" + text + "</p>")
+      console.log(text);
+      $("#devconsole").append("<p>" + text + "</p>");
     }
 
     window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
@@ -32,7 +32,7 @@
     }
 
     document.addEventListener("DOMContentLoaded", function() {
-      debug("page successfully loaded! now, do we have our external JS..?")
+      debug("page successfully loaded! now, do we have our external JS..?");
       populateWorlds();
     });
   </script>
