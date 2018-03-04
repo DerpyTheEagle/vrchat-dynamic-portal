@@ -12,29 +12,15 @@ var worlds = [
 var bindingsReady = false;
 
 function onBindingsReady(evt) {
-    debug("bindings ready!");
-    bindingsReady = true;
+  debug("bindings ready!");
+  bindingsReady = true;
 }
 document.addEventListener('onBindingsReady', onBindingsReady, false);
 
 function addWorld(worldimage, worldtitle, worldid) {
   var template;
   var element;
-  var clone;
-  var node;
-  template = `
-    <li>
-      <table class="world" onClick="goToWorld(\'${worldid}\')">
-        <tr>
-          <th>
-            <img class="worldpreview" src="${worldimage}">
-          </th>
-          <th>
-            <h1 class="worldtitle">${worldtitle}</h1>
-          </th>
-        <tr>
-    </li>
-  `;
+  template = "<li><table class=\"world\" onClick=\"goToWorld(\'" + worldid + "\')\"><tr><th><img class=\"worldpreview\" src=\"" + worldimage + "\"></th><th><h1 class=\"worldtitle\">" + worldtitle + "</h1></th><tr></li>";
 
   element = document.createElement('ul');
   element.innerHTML = template;
@@ -50,11 +36,11 @@ function populateWorlds() {
 
 // borrowed from naqtn on GitHub
 function goToWorld(id) {
-    if (!bindingsReady) {
-	      debug("tried to port, but bindings aren't ready! are we even in VRChat?");
-    }
-    debug("jumping to world= " + id);
-    engine.call("VRCSDK2.Networking.GoToRoom", id);
+  if (!bindingsReady) {
+    debug("tried to port, but bindings aren't ready! are we even in VRChat?");
+  }
+  debug("jumping to world= " + id);
+  engine.call("VRCSDK2.Networking.GoToRoom", id);
 }
 
 function onDevConsole() {
