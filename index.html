@@ -2,50 +2,32 @@
 <html>
   <head>
     <title>VRChat Dynamic Portal</title>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="normalize.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Okay, let's load our js libs! -->
+    <script defer src="lib/fontawesome-all.min.js"></script>
+    <script src="lib/jquery-3.3.1.min.js"></script>
+    <!-- Okay, JS libs loaded! Now it's time for CSS -->
+    <link rel="stylesheet" type="text/css" href="lib/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Finally, load Google Fonts so that things look nice -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
   </head>
-  <body unselectable="on" onselectstart="return false;" onmousedown="return false;">
+  <body>
     <ul id="navbar">
       <li onclick="offDevConsole();"><i class="fas fa-globe"></i></li>
       <li onclick="onDevConsole();"><i class="fas fa-terminal"></i></li>
     </ul>
     <div id="container">
+      <ul id="worldlist">
+      </ul>
     </div>
     <div id="devconsole" class="hidden">
       <form>
-        <table>
-          <th style="width:95%">
-            <input id="devconsoleinput" type="text">
-          </th>
-          <th style="width:5%">
-            <button id="devconsolesubmit" type="button" onClick="evalDevConsole();">Evaluate</button>
-          </th>
-        </table>
-    </form>
+        <input id="devconsoleinput" type="text">
+        <button id="devconsolesubmit" type="button" onClick="evalDevConsole();">Evaluate</button>
+      </form>
     </div>
   </body>
-  <script src="teleport.js"></script>
-  <script>
-    jQuery.noConflict();
-
-    function debug(text) {
-      console.log(text);
-      jQuery("#devconsole").append("<p>" + text + "</p>");
-    }
-
-    window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
-      debug("ERROR: " + errorMsg + " on line " + lineNumber + " in file " + url);
-      return false;
-    }
-
-    document.addEventListener("DOMContentLoaded", function() {
-      debug("page successfully loaded!");
-      populateWorlds();
-    });
-  </script>
+  <!-- Now that all of the proper HTML and CSS is loaded, let's call in our own JS -->
+  <script src="js/teleport.js"></script>
 </html>

@@ -1,5 +1,5 @@
 body {
-  background-image: url("background.jpg");
+  background-image: url("img/background.jpg");
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select:none;
@@ -32,7 +32,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: black;
   position: fixed;
   top: 0;
   height: 60px;
@@ -68,12 +68,13 @@ body {
   width: 100%
 }
 
-#devconsole table th #devconsoleinput {
-  width: 100%;
+#devconsole #devconsoleinput {
+  width: 94%;
+  z-index: 1001;
 }
 
-#devconsole table th #devconsolesubmit {
-  width: 100%;
+#devconsole #devconsolesubmit {
+  width: 5%;
 }
 
 .world {
